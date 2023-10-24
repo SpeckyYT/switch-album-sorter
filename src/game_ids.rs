@@ -12,11 +12,8 @@ fn get_game_ids_json_file() -> Vec<[String; 2]> {
                     match json {
                         Value::Array(array) => {
                             let mut output = vec![];
-                            match &array[..] {
-                                [Value::String(id), Value::String(game_name)] => {
-                                    output.push([id.clone(), game_name.clone()]);
-                                }
-                                _ => {}
+                            if let [Value::String(id), Value::String(game_name)] = &array[..] {
+                                output.push([id.clone(), game_name.clone()]);
                             }
                             output
                         }
@@ -52,7 +49,7 @@ pub fn get_game_name(id: &str) -> Option<String> {
     .chain(GAME_IDS)
     .find_map(|[game_id, game_name]| {
         if id == game_id {
-            Some(game_name.clone())
+            Some(game_name)
         } else {
             None
         }
@@ -75,6 +72,15 @@ macro_rules! game_ids {
 }
 
 game_ids!(
+    "57B4628D2267231D57E0FC1078C0596D"
+    "CCFA659F4857F96DDA29AFEDB2E166E6"
+    "50E2A11CE4BDDC72EF99DF78315D4938"
+    "0C7E8798D2996597BAFD59B427BF6132"
+    "1E95E5926F1CB99A87326D927F27B47E"
+    "CF99E5A89997DEB91E571D16DB468578"
+    "1AB131B6E6571375B79964211BB3F5AE"
+    => "Nintendo Switch"
+
     "D8E7C0AAD8A3BD026A180757B047D272"
     => "3 out of 10"
 
@@ -83,6 +89,9 @@ game_ids!(
 
     "02CB906EA538A35643C1E1484C4B947D"
     => "Animal Crossing New Horizons"
+
+    "EAD9CDD267F449963C89657382E411AE"
+    => "Baba Is You"
 
     "96794F2558A5B75BC0DBCC69AA0119EE"
     => "Super Bomberman R"
@@ -108,11 +117,17 @@ game_ids!(
     "79127164CA4A94F74187421B24A3AA8D"
     => "Clubhouse Games 51 Worldwide Classics"
 
+    "8D40251E125031858C3BF60FE94F331F"
+    => "CoComelon Play with JJ"
+
     "D30E1C2C7666B65122781E72D3DC0467"
     => "Cuphead"
 
     "B2AA81D02C39303EBD04D8D7F246F34A"
     => "Deltarune"
+
+    "220C7642926DEA0DE14849A462C4A8EB"
+    => "Doki Doki Literature Club Plus"
 
     "856C45B9690EEBA345D65FB4CE2A29EB"
     => "Fez"
@@ -120,8 +135,23 @@ game_ids!(
     "604C76706F52F5A7C9EB068576404348"
     => "Hotshot Racing"
 
+    "D83899EEBA9305445B9D20AF92C8ECD0"
+    => "It Takes Two"
+
+    "C33B823CE199779FD3A7722EDC1C67C8"
+    => "Just Shapes & Beats"
+
     "336DB1DA8BDC3BF38ED8609901964A6B"
     => "Kirby and the Forgotten Land"
+
+    "C74C768DBE8AD2777FE8EE0BB5CCCEAF"
+    => "LEGO 2K Drive"
+
+    "07D9814262B38BD7F7D0D29A25B162B8"
+    => "LEGO City Undercover"
+
+    "4D0B8BABC0F98827395A382631074284"
+    => "Lil Gator Game"
 
     "0C015090E6C5E3F06D97FEDE95458758"
     => "Luigi's Mansion 3"
@@ -134,9 +164,15 @@ game_ids!(
 
     "16851BE00BC6068871FE49D98876D6C5"
     => "Mario Kart 8 Deluxe"
+
+    "E9FC2E92476F589F890674FE873B0D05"
+    => "Mario Party Superstars"
     
     "E99362CFFB666A5E0A01AB378C44C507"
     => "Moving Out"
+
+    "8D65880476C8A1746DABBEAB4860F790"
+    => "Moving Out 2"
 
     "4A3C965CA3E534C39F98E517C8AE2522"
     => "Need for Speed Hot Pursuit"
@@ -144,11 +180,29 @@ game_ids!(
     "33B8CC310F76D76B17C6DB0011A75C8A"
     => "New Super Mario Bros U Deluxe"
 
+    "030CC84A0859ABD745D45D5F8AAD9975"
+    => "Nintendo Switch Sports"
+
+    "C46BE5741BFDE75BA1110C84E61676BA"
+    => "Nintendo Switch Online - Nintendo 64"
+
+    "CAA427D4F8C8DC9AE87E9002D724F42C"
+    => "No Man's Sky"
+
     "5F006BF2CE7EC39D3B861FA6F150B381"
     => "Octodad - Dadliest Catch"
 
     "7D6F548625BC0EB94C235FFE679A3299"
     => "Overcooked! 2"
+
+    "EC9541A5F19A0D56BEB69F9C89FBD5CF"
+    => "Peppa Pig Avventure Intorno al Mondo"
+
+    "31B7926A16300FCAC90E7674F3916DE7"
+    => "Persona 5 Royal"
+
+    "79431C08B38AB91E0A7D597E503B4A08"
+    => "PICO PARK"
 
     "39432935800814FC356D7F44D2FB9357"
     => "PICROSS S MEGA DRIVE & Master System edition"
@@ -156,14 +210,32 @@ game_ids!(
     "E0526A8155CFFE505A1FFDF7F2C82AB0"
     => "Puyo Puyo Tetris 2"
 
+    "509C2E182CFA1FEC85638A867964A772"
+    => "Rabbids Party of Legends"
+
     "638E7E1EEC4CD8A239243633C0345A07"
     => "Ring Fit Adventure"
+
+    "6F4D679ED7D2A016B654B265B956C5F0"
+    => "Rocket League"
+
+    "D869332CBCFA233B05144B42B5CCC54B"
+    => "Rubberduck Wave Racer"
 
     "94ADEF489DD19F1CD57AE194CF403C6C"
     => "Scribblenauts Mega Pack"
 
+    "85F8C21DFB6C68234E4132C1BEC3368D"
+    => "Sonic Frontiers"
+
+    "723B572B8930A7D95DCAB6E150B83EC1"
+    => "SpongeBob Krusty Cook-Off"
+
     "9465A26C8319F79D230D2D555FA4E03E"
     => "SpongeBob SquarePants Battle for Bikini Bottom - Rehydrated"
+
+    "F07AFCBE7985190919700F5A85BBBE99"
+    => "SpongeBob SquarePants The Cosmic Shake"
 
     "70D37874B56AA7B458E05479CF0E8FDB"
     => "Spyro Reignited Trilogy"
@@ -195,6 +267,9 @@ game_ids!(
     "253A54D569A6E75C22E0CDEEA04653E2"
     => "Taiko no Tatsujin Rhythmic Adventure Pack"
 
+    "0BF556E192EE2CE113FCAA64F3178DFE"
+    => "THE LONGING"
+
     "B732C90228064529ACEBB400746D9309"
     => "Truck Driver"
 
@@ -212,4 +287,7 @@ game_ids!(
 
     "923C2B3481E50EED77B8655436A19AEE"
     => "Will You Snail"
+
+    "47A65CA163C826522A27A853DA152761"
+    => "Who Wants To Be A Millionaire"
 );
