@@ -96,6 +96,9 @@ game_ids!(
     "96794F2558A5B75BC0DBCC69AA0119EE"
     => "Super Bomberman R"
 
+    "FAC96D01C8204092E78AF6ED7F526845"
+    => "Bluey The Videogame"
+
     "2998809A95ABA90F0C3D05F4CAB1384D"
     => "Boomerang Fu"
 
@@ -120,6 +123,12 @@ game_ids!(
     "8D40251E125031858C3BF60FE94F331F"
     => "CoComelon Play with JJ"
 
+    "8D659B81D121384A314B9F29331F4846"
+    => "Crawlco Block Knockers"
+
+    "CA5CB375B74CA5E8EF03099883908123"
+    => "Cry Babies Magic Tears The Big Game"
+
     "D30E1C2C7666B65122781E72D3DC0467"
     => "Cuphead"
 
@@ -131,6 +140,12 @@ game_ids!(
 
     "856C45B9690EEBA345D65FB4CE2A29EB"
     => "Fez"
+
+    "3AF4E7A11E56CB938D8EBAB910B97022"
+    => "Furry Hentai Tangram"
+
+    "3AB3FB37F4D60F3208932271E26CFE62"
+    => "Hole io"
 
     "604C76706F52F5A7C9EB068576404348"
     => "Hotshot Racing"
@@ -147,11 +162,17 @@ game_ids!(
     "C74C768DBE8AD2777FE8EE0BB5CCCEAF"
     => "LEGO 2K Drive"
 
+    "143CA80E86A5FF28CB6B35E95F8B427E"
+    => "LEGO Brawls"
+
     "07D9814262B38BD7F7D0D29A25B162B8"
     => "LEGO City Undercover"
 
     "4D0B8BABC0F98827395A382631074284"
     => "Lil Gator Game"
+
+    "FD3E588C42DA89808EDE57DCCF03D2A6"
+    => "L.O.L. Surprise! Roller Dreams Racing"
 
     "0C015090E6C5E3F06D97FEDE95458758"
     => "Luigi's Mansion 3"
@@ -174,11 +195,20 @@ game_ids!(
     "8D65880476C8A1746DABBEAB4860F790"
     => "Moving Out 2"
 
+    "A7CD5182B5FB5D3EDC78DCD8ABC77625"
+    => "Muse Dash"
+
     "4A3C965CA3E534C39F98E517C8AE2522"
     => "Need for Speed Hot Pursuit"
 
+    "837C83632B4DA9326E244736E3868F42"
+    => "NEEDY STREAMER OVERLOAD"
+
     "33B8CC310F76D76B17C6DB0011A75C8A"
     => "New Super Mario Bros U Deluxe"
+
+    "01E6912592E0E7CAAE75026165628A73"
+    => "Nickelodeon All-Star Brawl"
 
     "030CC84A0859ABD745D45D5F8AAD9975"
     => "Nintendo Switch Sports"
@@ -207,6 +237,9 @@ game_ids!(
     "39432935800814FC356D7F44D2FB9357"
     => "PICROSS S MEGA DRIVE & Master System edition"
 
+    "F5596A8FA308CD8548E2185C7EAFC373"
+    => "Polyturbo Drift Racing"
+
     "E0526A8155CFFE505A1FFDF7F2C82AB0"
     => "Puyo Puyo Tetris 2"
 
@@ -225,6 +258,9 @@ game_ids!(
     "94ADEF489DD19F1CD57AE194CF403C6C"
     => "Scribblenauts Mega Pack"
 
+    "66C396DFF5BBB36B52AEA44F72B55406"
+    => "Snipperclips"
+
     "85F8C21DFB6C68234E4132C1BEC3368D"
     => "Sonic Frontiers"
 
@@ -239,6 +275,9 @@ game_ids!(
 
     "70D37874B56AA7B458E05479CF0E8FDB"
     => "Spyro Reignited Trilogy"
+
+    "20295BD25291E8A82F5A998935ADA6D8"
+    => "Suika Game"
 
     "45998392CB216ABF034EB6F98E399A06"
     => "Super Mario 3D All-Stars"
@@ -255,6 +294,12 @@ game_ids!(
     "099ECEEF904DB62AEE3A76A3137C241B"
     => "Super Mario Party"
 
+    "DD36EAD444102ED69B0AF6882696E2E7"
+    => "Super Mario RPG"
+
+    "E5B04B40CFD924420DF6142200E473B4"
+    => "Super Mario Wonder"
+
     "E73E4976CD1992F1CF99AC0053695FD6"
     => "Super Monkey Ball Banana Blitz"
 
@@ -270,6 +315,12 @@ game_ids!(
     "0BF556E192EE2CE113FCAA64F3178DFE"
     => "THE LONGING"
 
+    "4B42E62DC6B986005C9F76C8C24F28A8"
+    => "Trolls Remix Rescue"
+
+    "BDBA961F9C5E6E39D558A949E04CECEE"
+    => "Trombone Champ"
+
     "B732C90228064529ACEBB400746D9309"
     => "Truck Driver"
 
@@ -284,6 +335,9 @@ game_ids!(
 
     "993AC1F3383F4FF879FEA9A85677F9F9"
     => "VVVVVV"
+
+    "C62B7194CC61B274390C97CFDB54A760"
+    => "Youtubers Life 2"
 
     "923C2B3481E50EED77B8655436A19AEE"
     => "Will You Snail"
