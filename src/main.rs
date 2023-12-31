@@ -4,35 +4,27 @@ use std::fs::read_dir;
 use std::{fs, path::Path};
 use std::path::PathBuf;
 
-use clap::{Command, arg};
+use clap::Parser;
 use walkdir::WalkDir;
 
 use crate::game_ids::get_game_name;
 
-fn main() {
-    let matches = Command::new("switch-album-sorter")
-        .args(&[
-            arg!(-i --input <ALBUM> "Input Album folder"),
-            arg!(-o --output <FOLDER> "Output Sorted folder"),
-        ])
-        .get_matches();
+/// Switch Album Sorter
+#[derive(Parser)]
+struct Cli {
+    /// Input Album folder
+    input: PathBuf,
 
-    let album_dir = PathBuf::from(
-        matches
-        .get_one::<String>("input")
-        .unwrap_or(&String::from("Album"))
-    );
-    let sorted_dir = PathBuf::from(
-        matches
-        .get_one::<String>("output")
-        .unwrap_or(
-            &album_dir
-            .join("../Sorted")
-            .to_str()
-            .unwrap()
-            .to_string()
-        )
-    );
+    /// Output Sorted folder
+    #[arg(short, long)]
+    output: Option<PathBuf>,
+}
+
+fn main() {
+    let Cli { input, output } = Cli::parse();
+
+    let album_dir = input;
+    let sorted_dir = output.unwrap_or(PathBuf::from(album_dir.join("../Sorted")));
 
     create_and_check_dirs(&album_dir, &sorted_dir);
     clean_up_sorted(&sorted_dir);
